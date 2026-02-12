@@ -1,23 +1,13 @@
+//start screen
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.startQuiz,{super.key});
+  const StartScreen(
+    this.startQuiz, {super.key});
   final void Function() startQuiz;
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 63, 8, 165),
-            Color.fromARGB(255, 12, 1, 39),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
-      child: Center(
+    return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -33,14 +23,13 @@ class StartScreen extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             OutlinedButton.icon(
-              onPressed: startQuiz,
+              onPressed:startQuiz,
               icon: const Icon(Icons.arrow_circle_right_outlined),
               style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
-              label: Text("Start quiz"),
+              label: Text("Start Quiz"),
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

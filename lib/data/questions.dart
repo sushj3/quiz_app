@@ -10,5 +10,15 @@ QuizQuestion(
     'He never had any arms',
   ]
   ),
+  QuizQuestion(
+    'What is the capital of Japan?',
+    [
+      'Seoul', //Correct
+      'Tokyo',
+      'Beijing',
+      'Bangkok',
+    ]
+  ),
+  
 
 ];
