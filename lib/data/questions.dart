@@ -1,5 +1,6 @@
 import 'package:quiz_app/models/quiz_question.dart';
-
+import 'package:quiz_app/answer_button.dart';
+import 'package:quiz_app/data/questions.dart';
 const questions = [
 QuizQuestion(
   'How did Edward Elric lose his arm in FMA?',
@@ -19,6 +20,6 @@ QuizQuestion(
       'Bangkok',
     ]
   ),
-  
+
 
 ];
