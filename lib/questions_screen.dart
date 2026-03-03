@@ -7,22 +7,23 @@ class QuestionsScreen extends StatefulWidget{
   const QuestionsScreen({super.key, required this.onSelectedAnswer});
 
 final void Function(String answer) onSelectedAnswer;
+@override
   State<QuestionsScreen> createState(){
     return _QuestionsScreenState();
   }
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen>{
-
-  @override
-  Widget build(BuildContext context){
-    var currentQuestionIndex = 0;
-    void answerQuestion(String selectedAnswers){
+var currentQuestionIndex = 0;
+void answerQuestion(String selectedAnswers){
         widget.onSelectedAnswer(selectedAnswers);
       setState((){
         currentQuestionIndex++;
       });
     }
+  @override
+  Widget build(BuildContext context){
+    
     final currentQuestion = questions[currentQuestionIndex];
     return SizedBox(
       width: double.infinity,
@@ -35,7 +36,7 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
             Text(currentQuestion.question,
             style: GoogleFonts.lato(
                 color: Colors.white,
-                fontSize: 22
+                fontSize: 24,
             ),
             textAlign: TextAlign.center,
             ),
